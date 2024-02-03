@@ -1,12 +1,14 @@
 import unittest
-from main import factorial
+from src.main import get_user_input
+from unittest.mock import patch
 
-class TestFactorial(unittest.TestCase):
-    def test_factorial(self):
-        self.assertEqual(factorial(0), 1)
-        self.assertEqual(factorial(1), 1)
-        self.assertEqual(factorial(5), 120)
-        self.assertEqual(factorial(10), 3628800)
+
+class TestUserInput(unittest.TestCase):
+    @patch('src.main.inp')
+    def test_user_input(self, mock_input):
+        mock_input.return_value = "Nathaniel"
+        self.assertEqual("dummy", get_user_input())
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,0 +1,4 @@
+sonar
+.coverage
+.scannerwork
+__pycache__
