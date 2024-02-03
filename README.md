@@ -1,10 +1,15 @@
-# A python project to demonstrate SonarQube
+# A Python project to demonstrate SonarQube
 
 ## Run the following commands
 
 ```shell
+# Create virtual environment
 python -m venv sonar
+
+# Activate the virtual environment
 source ./sonar/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
 
 # Run the python script
